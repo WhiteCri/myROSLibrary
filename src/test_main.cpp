@@ -25,4 +25,10 @@ int main(int argc, char *argv[]){
     ROS_INFO_CONTAINER("foovec", fooVec.begin(), fooVec.end());
     ROS_INFO_CONTAINER("intary", ary, ary+7);
     ROS_INFO_DATA(3, 5.0, "hmm", "I want you!");
+
+    for(int i = 0 ; i < 10; ++i){
+        ROS_INFO("----------------------------------");
+        for(auto& intVal : ary)
+            ROS_INFO("%d", intVal);
+    }
 }
